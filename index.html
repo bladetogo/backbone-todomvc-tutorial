@@ -14,9 +14,13 @@
 		<header id="header">
 			<h1>todos</h1>
 			<!-- Ex1.0: Create the todo input. -->
+			<input type="text" id="new-todo" placeholder="What needs to be done?">
 		</header>
 		<section id="main">
 			<!-- Ex1.1: Create a toggle all checkbox and todo list container  -->
+			<input type="checkbox" id="toggle-all"/>
+			<label for="toggle-all">Mark all as complete</label>
+			<ul id="todo-list"></ul>
 		</section>
 		<footer id="footer"></footer>
 	</section>
@@ -26,5 +30,29 @@
 		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 	</div>
 	<!-- Ex1.2: Create underscore templates -->
+	<script type="text/template" id="item-template">
+		<div class="view">
+			<input type="checkbox" class="toggle"/>
+			<label></label>
+			<button class="destroy">
+		</div>
+		<input type="text" id="edit"/>
+	</script>
+	<script type="text/template" id="stats-template">
+		<span id="todo-count">
+			<ul id="filters">
+				<li>
+					<a class="selected" href="#/">All</a>
+				</li>
+				<li>
+					<a class="active" href="#/active">All</a>
+				</li>
+				<li>
+					<a class="Completed" href="#/completed">All</a>
+				</li>
+			</ul>
+		</span>
+		<button id="clear-completed">Clear Completed</button>
+	</script>
 </body>
 </html>

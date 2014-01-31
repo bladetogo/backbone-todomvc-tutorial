@@ -14,11 +14,11 @@
 		<header id="header">
 			<h1>todos</h1>
 			<!-- Ex1.0: Create the todo input. -->
-			<input type="text" id="new-todo" placeholder="What needs to be done?">
+			<input id="new-todo" placeholder="What needs to be done?">
 		</header>
 		<section id="main">
 			<!-- Ex1.1: Create a toggle all checkbox and todo list container  -->
-			<input type="checkbox" id="toggle-all"/>
+			<input id="toggle-all" type="checkbox">
 			<label for="toggle-all">Mark all as complete</label>
 			<ul id="todo-list"></ul>
 		</section>
@@ -32,27 +32,26 @@
 	<!-- Ex1.2: Create underscore templates -->
 	<script type="text/template" id="item-template">
 		<div class="view">
-			<input type="checkbox" class="toggle"/>
+			<input class="toggle" type="checkbox">
 			<label></label>
-			<button class="destroy">
+			<button class="destroy"></button>
 		</div>
-		<input type="text" id="edit"/>
+		<input class="edit">
 	</script>
 	<script type="text/template" id="stats-template">
-		<span id="todo-count">
-			<ul id="filters">
-				<li>
-					<a class="selected" href="#/">All</a>
-				</li>
-				<li>
-					<a class="active" href="#/active">All</a>
-				</li>
-				<li>
-					<a class="Completed" href="#/completed">All</a>
-				</li>
-			</ul>
-		</span>
-		<button id="clear-completed">Clear Completed</button>
+		<span id="todo-count"></span>
+		<ul id="filters">
+			<li>
+				<a class="selected" href="#/">All</a>
+			</li>
+			<li>
+				<a href="#/active">Active</a>
+			</li>
+			<li>
+				<a href="#/completed">Completed</a>
+			</li>
+		</ul>
+		<button id="clear-completed" text="Clear Completed"></button>
 	</script>
 </body>
 </html>
